@@ -20,7 +20,7 @@ export const getListKontak = () => {
     //get API
     axios({
       method: "get",
-      url: "http://localhost:3000/kontak",
+      url: "https://redux--11.herokuapp.com/api",
       timeout: 120000
     })
       .then(res => {
@@ -61,7 +61,7 @@ export const addKontak = data => {
     //get API
     axios({
       method: "post",
-      url: "http://localhost:3000/kontak",
+      url: "https://redux--11.herokuapp.com/api",
       timeout: 120000,
       data: data
     })
@@ -103,7 +103,7 @@ export const deleteKontak = id => {
     //get API
     axios({
       method: "delete",
-      url: "http://localhost:3000/kontak/" + id,
+      url: "https://redux--11.herokuapp.com/api" + id,
       timeout: 120000
     })
       .then(res => {
@@ -157,7 +157,7 @@ export const updateKontak = data => {
     //get API
     axios({
       method: "put",
-      url: "http://localhost:3000/kontak/" + data.id,
+      url: "https://redux--11.herokuapp.com/api" + data.id,
       timeout: 120000,
       data: data
     })
