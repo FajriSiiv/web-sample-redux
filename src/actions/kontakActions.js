@@ -5,6 +5,8 @@ export const ADD_KONTAK = "ADD_KONTAK";
 export const DELETE_KONTAK = "DELETE_KONTAK";
 export const DETAIL_KONTAK = "DETAIL_KONTAK";
 export const UPDATE_KONTAK = "UPDATE_KONTAK";
+export const baseUrl = "https://sample-api88.herokuapp.com/kontak";
+
 export const getListKontak = () => {
   return dispatch => {
     //loading
@@ -20,7 +22,7 @@ export const getListKontak = () => {
     //get API
     axios({
       method: "get",
-      url: "https://redux--11.herokuapp.com/api",
+      url: baseUrl,
       timeout: 120000
     })
       .then(res => {
@@ -61,7 +63,7 @@ export const addKontak = data => {
     //get API
     axios({
       method: "post",
-      url: "https://redux--11.herokuapp.com/api",
+      url: baseUrl,
       timeout: 120000,
       data: data
     })
@@ -103,7 +105,7 @@ export const deleteKontak = id => {
     //get API
     axios({
       method: "delete",
-      url: "https://redux--11.herokuapp.com/api" + id,
+      url: baseUrl + id,
       timeout: 120000
     })
       .then(res => {
@@ -157,7 +159,7 @@ export const updateKontak = data => {
     //get API
     axios({
       method: "put",
-      url: "https://redux--11.herokuapp.com/api" + data.id,
+      url: baseUrl + data.id,
       timeout: 120000,
       data: data
     })
